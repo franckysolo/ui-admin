@@ -16,3 +16,5 @@ npm i
 ```shell
 lessc menu.less > menu.css
 ```
+
+[See the demo](http://www.ui-admin.franckysolo-development.com/)
