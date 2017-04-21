@@ -99,7 +99,7 @@ body {
     width: 100%;
   }
   .navbar-toggle {
-    margin-right: 0;
+    margin-right: -15px;
   }
   #page {
     margin-left: 64px;
