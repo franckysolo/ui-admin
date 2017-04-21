@@ -1,6 +1,6 @@
 html,body {
 height: 100%;
-overflow: hidden;
+// overflow: hidden;
 }
 
 #panel-drawer {
@@ -10,7 +10,6 @@ overflow: hidden;
   width:260px;
   height: 100vh;
   margin: 0;
-  position: relative;
   .spin-caret {
     float: right;
   }
@@ -49,9 +48,10 @@ overflow: hidden;
 
 #page {
   background: #fff;
+  margin:0;
   margin-left: 260px;
   padding: 20px;
-  width: calc(~"100% - 260px");
+  width: calc(~"100% - 270px");
   &.drawer-off {
     margin-left: 0;
     width: 100%;
