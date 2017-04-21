@@ -1,0 +1,124 @@
+html,body {
+height: 100%;
+overflow: hidden;
+}
+
+#panel-drawer {
+  background: #f7f7f7;
+  border-right: 1px solid #ddd;
+  position: fixed;
+  width:260px;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  .spin-caret {
+    float: right;
+  }
+  &.drawer-off {
+    left: -260px;
+    transition: all ease 0.3s;
+  }
+  &.drawer-on {
+    left: 0;
+    transition: all ease 0.3s;
+  }
+  .panel-group {
+    margin-bottom: 0;
+    .panel {
+      border-right: none;
+      border-left: none;
+      box-shadow: none;
+      &:first-child {
+        border-top: none;
+      }
+      + .panel {
+        margin-top:0;
+        border-top: none;
+      }
+    }
+  }
+  .drawer-footer {
+    position: absolute;
+    bottom: 55px;
+    z-index: 100;
+    display: block;
+    width: 100%;
+    height: 20px;
+  }
+}
+
+#page {
+  background: #fff;
+  margin-left: 260px;
+  padding: 20px;
+  width: calc(~"100% - 260px");
+  &.drawer-off {
+    margin-left: 0;
+    width: 100%;
+    transition: all ease 0.3s;
+  }
+  &.drawer-on {
+    margin-left: 260px;
+    width: calc(~"100% - 260px");
+    transition: all ease 0.3s;
+  }
+}
+
+#menu-vertical {
+  * {
+    border-radius: 0;
+  }
+}
+
+.navbar {
+  border-radius: 0;
+  &-default {
+    margin-bottom: 0;
+  }
+  &-header {
+    width: 244px;
+    margin-left: 0;
+  }
+}
+
+.spin-caret {
+  transform: rotate(180deg);
+  transition: transform ease .3s;
+}
+.collapsed .spin-caret {
+  transform: rotate(0);
+  transition: transform ease .3s;
+}
+
+// Responsive small devices
+@media all and (max-width:640px) {
+  #panel-drawer {
+    width: 64px;
+    .list-group-item {
+      text-align: center;
+    }
+    .panel-title {
+      text-align: center;
+    }
+    .spin-caret {
+      float: none;
+    }
+  }
+  .navbar {
+    &-header {
+      width: 100%;
+    }
+    &-toggle {
+      margin-right: 0;
+    }
+  }
+  #page {
+    margin-left: 64px;
+    width: calc(~"100% - 64px");
+    &.drawer-on {
+      margin-left: 64px;
+      width: calc(~"100% - 64px");
+      transition: all ease 0.3s;
+    }
+  }
+}

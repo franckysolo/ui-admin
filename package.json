@@ -1,0 +1,25 @@
+{
+  "name": "ui-admin",
+  "version": "0.1.0",
+  "description": "ui-admin template with drawer menu",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Bootstrap",
+    "Jquery",
+    "Fonts awesome"
+  ],
+  "author": "franckysolo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/franckysolo/ui-admin.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1"
+  }
+}
